@@ -1,0 +1,39 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dark Navbar */
+.navbar-custom {
+  background-color: #212121; /* very dark gray */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Footer */
+.footer-dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.hero-section {
+  background: linear-gradient(to right, orange, orangered);
+  color: white;
+  padding-top: 130px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.btn-orange {
+  background-color: #ff572;
+  border: none;
+}
+
+.btn-orange:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.modal-header.bg-warning {
+  background: linear-gradient(to right, orange, orangered);
+  color: white;
+}
