@@ -38,7 +38,7 @@ public class HomeController {
         User existingUser = userRepository.findByEmail(user.getEmail());
 
         if (existingUser != null && existingUser.getPassword().equals(user.getPassword())) {
-            return "redirect:/Home"; // 🔁 redirect so the @GetMapping("/Home") is triggered
+            return "redirect:/Home";
         } else {
             redirectAttributes.addFlashAttribute("errorMessage", "Invalid credentials.");
             return "redirect:/";
@@ -70,17 +70,17 @@ public class HomeController {
         return "redirect:/Home";
     }
 
-    @GetMapping("/Home")  // URL to visit for homepage
+    @GetMapping("/Home")
     public String listUsers(Model model) {
         List<User> users = userRepository.findAll();
         model.addAttribute("users", users);
-        return "Home";  // Thymeleaf template Home.html (case-sensitive)
+        return "Home";
     }
 
     @PostMapping("/logout")
     public String logout(HttpSession session) {
         session.invalidate();
-        return "redirect:/";  // redirect to landing page or login page
+        return "redirect:/";
     }
 
 }
