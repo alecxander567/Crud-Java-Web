@@ -13,4 +13,5 @@ export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 export PATH="$JAVA_HOME/bin:$PATH"
 
 # Run the build and skip tests
-./mvnw clean install -DskipTests
+./mvnw clean package -DskipTests
+
