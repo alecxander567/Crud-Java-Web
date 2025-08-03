@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 
-# Install SDKMAN
-curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+# Install Java 21 explicitly
+sdk install java 21.0.3-tem
+sdk use java 21.0.3-tem
 
-# Install Java
-sdk install java 17.0.8-tem
-sdk use java 17.0.8-tem
-
-# Set JAVA_HOME for Maven wrapper
+# Set JAVA_HOME
 export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 export PATH="$JAVA_HOME/bin:$PATH"
 
-# Now build your Java project
+# Run Maven build
 ./mvnw clean install
