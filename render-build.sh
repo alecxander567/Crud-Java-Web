@@ -12,7 +12,5 @@ sdk use java 17.0.8-tem
 export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 export PATH="$JAVA_HOME/bin:$PATH"
 
-# Run the build
-#!/usr/bin/env bash
+# Run the build and skip tests
 ./mvnw clean install -DskipTests
-
